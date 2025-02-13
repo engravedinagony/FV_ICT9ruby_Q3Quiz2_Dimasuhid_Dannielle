@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q3QUIZ2</title>
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+    	h1 {
+    		text-align: center;
+    		font-family: Courier New;
+    	}
+
+            body, html {
+    	
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  
+  background-image: url("https://i0.wp.com/machronicle.com/wp-content/uploads/2024/09/Album-Review-Cover-Image-Template-M-A-Chronicle.png?fit=1600%2C900&ssl=1");
+
+  
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  
+  height: 100%;
+
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+	background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+    </style>
+
+</head>
+<body>
+	<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h1 style="color: floralwhite;">Buy Tickets to Keshi Concert</h1>
+  <p style="font-family: Courier New;">Reqiuem Tour '25</p>
+
+  <details ontoggle="info()">
+  	<summary style="text-align: center; font-family: Courier New;">Personal Information</summary>
+  	<i id="info"></i>
+  	<br>
+
+  <div class="container">
+	<form style="font-family: Courier New;">
+		<div class="container">
+	<form onsubmit="showMessage(); return false;">
+        <div>
+            <label>Full Name:</label><br>
+            <input type="text" required>
+        </div>
+        <br>
+        <div>
+            <label>Age:</label><br>
+            <input type="number" required>
+        </div>
+        <br>
+        <div>
+            <label>Email:</label><br>
+            <input type="email" required>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+          </form>
+        
+         <script>
+        function showPopup() {
+            const popup = window.open('', 'Thank You', 'width=300,height=200');
+            popup.document.write('<h2 style="text-align:center; margin-top:50px;">Thank you for purchasing, enjoy the tour!</h2>');
+            popup.document.body.style.fontFamily = 'Courier New, Courier, monospace';
+        }
+    </script>
+
+
+		</div>
+		</details>
+	
+		<details ontoggle="info()">
+  	<summary style="text-align: center; font-family: Courier New;">Ticket Price</summary>
+  	<i id="info"></i>
+  	<label style="font-family: Courier New">Choose your seat</label>
+  	<br>
+
+<select name="price" id="price">
+  <option value="8300" id= price >LBA PREMIUM</option>
+  <option value="7300" id= price >LBA REGULAR</option>
+  <option value="4000" id= price >UB PREMIUM</option>
+  <option value="2500" id= price >UB REGULAR</option>
+  <option value="1800" id= price >GEN AD</option>
+</select>
+<br>
+<br>
+<label style="font-family: Courier New">Choose an option</label>
+<br>
+<select name="ticket price" id="ticket price">
+  <option value="2000"id= price >Student</option>
+  <option value="1500"id= price >Adult</option>
+   <option value="2500"id= price >PWD</option>
+
+</select>
+  	<br>
+<br>
+<script>
+   function calculateTicketPrice() {
+            var ticketType = document.getElementById('ticketType').value;
+            var category = document.getElementById('category').value;
+
+            var price;
+            if (category === "Student") {
+                price = "$10.00";
+            } else if (category === "Senior") {
+                price = "$12.00";
+            } else {
+                price = "$15.00";
+            }
+
+            alert("Welcome, " + document.getElementById('nameInput').value + "!\nYou have selected: " + ticketType + " (" + category + ")\nPrice: " + price);
+            </script>
+ <input type="submit" value="Ticket Price">
+  	<br>
+  </details>
+
+   <details ontoggle="info()">
+  	<summary style="text-align: center; font-family: Courier New;">Print Ticket</summary>
+  	<i id="info"></i>
+  	<img src="Requiem Tour.png" height="200px">
+  	<br><button onlick="generateTicket()">Print Ticket</button>
+
+  </details>
+  <script>
+
+        function showValue(){
+        	var showMe = document.getElementById("price").value;
+        	var reveal = document.getElementById()
+        }
+        
+    </script>
+
+ 
+</div>
+</body>
+</html>
